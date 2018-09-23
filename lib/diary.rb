@@ -37,4 +37,11 @@ class Diary
     fail "Diary is locked!" if @locked
     @notes << message
   end
+
+  def view_notes
+    fail "Diary is locked!" if @locked
+    @notes.each do |note|
+      puts "#{note}"
+    end
+  end
 end
